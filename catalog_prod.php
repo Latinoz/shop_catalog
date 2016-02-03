@@ -9,17 +9,20 @@ include 'lib.inc.php';
 
       $cheks = $_POST['checkbox0'];
       
-	  //$fordelete = array();
-      foreach($cheks as $fordelete){
+	  if (!empty($cheks))  {
+	  
+      foreach($cheks as $fordelete) {
       		
          
-      //var_dump($fordelete);
-
+      
       $sql = "delete from product where id='".$fordelete."'";
       $result = mysqli_query($link,$sql) or die(mysqli_error($link));
 
       }
-
+    
+		
+}	  
+	  
 ?>
 
 <!DOCTYPE html>
@@ -55,9 +58,11 @@ include 'lib.inc.php';
   
   <?php
   $goods = selectAllItems($link);
-      foreach($goods as $item)
+        foreach($goods as $item)
       {
+	  
     ?> 
+	
   
     
    <tr><td>	
@@ -71,7 +76,7 @@ include 'lib.inc.php';
   </td></tr>
   
   <? }
- // mysqli_close($link);
+ 
 ?>
 </form>
 </table>
