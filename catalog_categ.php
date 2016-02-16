@@ -1,8 +1,6 @@
 <?php
-
 include "config.inc.php";
 include "lib.inc.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -14,21 +12,21 @@ include "lib.inc.php";
 <body>
 
 
-<!--<table border="1" cellpadding="4" cellspacing="0" width="100%">
+<table border="1" cellpadding="4" cellspacing="0" width="100%">
 <tr>
 	<th></th>
 	<th>ID</th>
 	<th>Категория товара</th>
 </tr>
-</table>
--->
+
+
 
 
  <?php
-
 selectGategs($link,$sql);
-
 ?>
+
+</table>
 
 <br></br>
 <a href="catalog_prod.php">Каталог Товаров</a>
