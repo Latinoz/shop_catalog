@@ -45,21 +45,14 @@ function selectGategs($link){
 	return false;
 	
         
-	    echo "<table border='1' cellpadding='14' cellspacing='0' width='100%'>\n";
-		echo "<tr>";
-	    echo "<th></th>";
-	    echo "<th>ID</th>";
-	    echo "<th>Категория товара</th>";
-        echo "</tr>";
+	    while($row = mysqli_fetch_assoc($res)){
 		
-		while($row = mysqli_fetch_assoc($res)){
 		echo "<tr><td></td><td>",$row['ID'],"</td>";
 		echo "<td>",$row['name'],"</td></tr>\n";
+		
 		}
 		
-		echo "</table>";
-	 
-
+	
      }
 
 
