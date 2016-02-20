@@ -3,6 +3,26 @@ include "config.inc.php";
 include "lib.inc.php";
 ?>
 
+<?php
+
+      $cheks_categ = $_POST['checkbox1'];
+      
+	  if (!empty($cheks_categ))  {
+	  
+      foreach($cheks_categ as $fordelete_categ) {
+      		
+         
+      
+      $sql = "delete from category where id='".$fordelete_categ."'";
+      $result = mysqli_query($link,$sql) or die(mysqli_error($link));
+
+      }
+    
+		
+}	  
+	  
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,13 +39,21 @@ include "lib.inc.php";
 	<th>Категория товара</th>
 </tr>
 
+<form action="" method="post">
+  
+  <input name="delete" type="submit" id="delete" value="Удалить категорию">
+  <br>
+  </br>
 
 
-
+  
  <?php
+ 
 selectGategs($link,$sql);
+
 ?>
 
+</form>
 </table>
 
 <br></br>
