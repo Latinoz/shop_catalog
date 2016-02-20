@@ -1,7 +1,7 @@
 <?php
 
-include "lib.inc.php";
 include "config.inc.php";
+include "lib.inc.php";
 
 ?>
 
@@ -13,7 +13,7 @@ include "config.inc.php";
 </head>
 <body>
 	<form action="save_product.php" method="post">
-		<p>Наименование товара: <input type="text" name="title" size="40">
+		<p>Наименование товара: <input type="text" name="title" size="30">
 		
 		<p>Категория товара: <select name="catselect">
         <option value="0">Выберите категорию</option>
@@ -26,11 +26,11 @@ include "config.inc.php";
         
 	 echo "<option value='".$row['ID']."'>".$row['name']."</option>";
     
-     }
+         }
 	?>
      </select>
 		
-		<p>Вес товара, кг: <input type="text" name="netto" size="14">
+		<p>Вес товара, кг: <input type="text" name="netto" size="5">
 		<p><input type="submit" value="Добавить">
 	</form>
 	
