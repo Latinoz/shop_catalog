@@ -47,7 +47,8 @@ function selectGategs($link){
         
 	    while($row = mysqli_fetch_assoc($res)){
 		
-		echo "<tr><td></td><td>",$row['ID'],"</td>";
+		echo "<tr><td>",'<input type="checkbox" name="checkbox1[]" value='.$row['ID'].'/>',"</td>";
+		echo "<td>",$row['ID'],"</td>";
 		echo "<td>",$row['name'],"</td></tr>\n";
 		
 		}
