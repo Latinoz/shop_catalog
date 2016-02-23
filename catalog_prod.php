@@ -4,7 +4,6 @@ include 'config.inc.php';
 include 'lib.inc.php';
 
 ?>
-
 <?php
 
       $cheks = $_POST['checkbox0'];
@@ -24,7 +23,6 @@ include 'lib.inc.php';
 }	  
 	  
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,21 +30,18 @@ include 'lib.inc.php';
 	<title>Каталог</title>
 </head>
 <body>
-<br>
-</br>
+
 <a href="add_product.php"><b>Добавить новый товар</b></a>
 <br>
 </br>
-<a href="add_categ.php"><b>Добавить новую категорию</b></a>
-<br>
-</br>
+
 
 <table border="1" cellpadding="4" cellspacing="0" width="100%">
 <tr>
 	<th></th>
 	<th>ID</th>
 	<th>Наименование товара</th>
-	<th>Категория товара</th>
+	<th><a href="catalog_categ.php">Категория товара</a></th>
 	<th>Вес товара, кг</th>
 </tr>
 
@@ -56,28 +51,14 @@ include 'lib.inc.php';
   <br>
   </br>
   
-  <?php
-  $goods = selectAllItems($link);
-        foreach($goods as $item)
-      {
-	  
-    ?> 
+  
+ <?php
+   selectAllItems($link,$sql);
+    
+ ?> 
 	
   
-    
-   <tr><td>	
-   <input type="checkbox" name="checkbox0[]" value="<? echo $item['id']; ?>">
-   
-      
-  </td> <td><?= $item['id']?>
-  </td> <td><?= $item['title']?>
-  </td> <td><?= $item['category_id']?>
-  </td> <td><?= $item['netto']?>
-  </td></tr>
   
-  <? }
- 
-?>
 </form>
 </table>
 </body>
