@@ -29,15 +29,26 @@ if (!$stmt = mysqli_prepare($link, $sql)) return false;
 
 }    
 
-function selectAllItems($link){
-  $sql = 'SELECT id, title, category_id, netto FROM product';
-  if(!$result = mysqli_query($link, $sql)) 
-    return false; 
-                     $items = mysqli_fetch_all($result, MYSQLI_ASSOC); 
-                     mysqli_free_result($result); 
-                 return $items;
-    }
 
+function selectAllItems($link){
+   $sql = 'SELECT id, title, category_id, netto FROM product';  
+   if(!$result = mysqli_query($link, $sql)) 
+    return false; 
+	     
+		 while($row = mysqli_fetch_assoc($result)){
+		
+		echo "<tr><td>",'<input type="checkbox" name="checkbox0[]" value='.$row['id'].'>',"</td>";
+		echo "<td>",$row['id'],"</td>";
+		echo "<td>",$row['title'],"</td>";
+		echo "<td>",$row['category_id'],"</td>";
+		echo "<td>",$row['netto'],"</td></tr>\n";
+		
+		}
+		
+	
+     }
+ 
+ 
 function selectGategs($link){
   $sql = 'SELECT * FROM category';
 	
@@ -47,7 +58,7 @@ function selectGategs($link){
         
 	    while($row = mysqli_fetch_assoc($res)){
 		
-		echo "<tr><td>",'<input type="checkbox" name="checkbox1[]" value='.$row['ID'].'/>',"</td>";
+		echo "<tr><td>",'<input type="checkbox" name="checkbox1[]" value='.$row['ID'].'>',"</td>";
 		echo "<td>",$row['ID'],"</td>";
 		echo "<td>",$row['name'],"</td></tr>\n";
 		
