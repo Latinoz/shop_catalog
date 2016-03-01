@@ -69,7 +69,7 @@ if(!empty($_POST['submit']))
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Авторизация пользователя</title>
+	<title>Аутентификация пользователя</title>
 </head>
 <body>
 
