@@ -14,7 +14,7 @@ include 'lib.inc.php';
 </head>
 <body>
 
-<a href="login.php">Авторизация пользователя</a>
+<a href="login.php">Аутентификация пользователя</a>
 <br>
 </br>
 
