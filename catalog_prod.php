@@ -16,9 +16,9 @@ if (isset($_COOKIE['id']) and isset($_COOKIE['hash']))
 
     {
 
-        setcookie("id", "", time() - 3600*24*30*12, "/");
+        setcookie("id", "", time() - 3600*24*30*12);
 
-        setcookie("hash", "", time() - 3600*24*30*12, "/");
+        setcookie("hash", "", time() - 3600*24*30*12);
         
         print "Хм, что-то не получилось";
 
@@ -88,7 +88,11 @@ else
   <input name="delete" type="submit" id="delete" value="Удалить выбранный товар">
   <br>
   </br>
-  
+    
+   <a href="index.php">Главная страница</a>
+  <br>
+  </br>
+  <a href="logout.php">Выход</a>
   
  <?php
    selectAllItems($link,$sql);

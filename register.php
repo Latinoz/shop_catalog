@@ -28,6 +28,8 @@ registrator($link)
 <a href="login.php">Войти</a>
 
 </form>
+<br>
+<a href="index.php">Главная страница</a>
 
 </body>
 </html>

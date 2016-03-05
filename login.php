@@ -69,7 +69,7 @@ if(!empty($_POST['submit']))
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Аутентификация пользователя</title>
+	<title>Авторизация пользователя</title>
 </head>
 <body>
 
@@ -84,6 +84,10 @@ if(!empty($_POST['submit']))
 <a href="register.php">Зарегистрироваться</a>
 
 </form>
+<br>
+
+<a href="index.php">Главная страница</a>
+
 
 </body>
 </html>
