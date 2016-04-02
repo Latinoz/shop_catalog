@@ -1,7 +1,7 @@
 <?php
 
-include 'config.inc.php';
-include 'lib.inc.php';
+require_once "lib/config.inc.php";
+require_once "lib/lib.inc.php";
 
 
 login_generation_hash($code);      //Функция для генерации случайной строки

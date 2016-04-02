@@ -1,7 +1,7 @@
 <?php
 
-include 'config.inc.php';
-include 'lib.inc.php';
+require_once "lib/config.inc.php";
+require_once "lib/lib.inc.php";
 
      if  (!empty($_COOKIE['hash']) or ($_COOKIE['id'])) 
 	 { 
